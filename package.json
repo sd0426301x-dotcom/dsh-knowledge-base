@@ -1,0 +1,42 @@
+{
+  "name": "dsh-knowledge-base",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A local-first, searchable knowledge base for the DSH workspace, shown as a sidebar panel.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sd0426301x-dotcom/dsh-knowledge-base.git"
+  },
+  "homepage": "https://github.com/sd0426301x-dotcom/dsh-knowledge-base",
+  "bugs": {
+    "url": "https://github.com/sd0426301x-dotcom/dsh-knowledge-base/issues"
+  },
+  "scripts": {
+    "setup": "node tools/install.mjs"
+  },
+  "exports": {
+    ".": "./host.js",
+    "./catalog": "./catalog.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "host.js",
+    "ui.js",
+    "catalog.js",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "PRIVACY.md",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "tools/install.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

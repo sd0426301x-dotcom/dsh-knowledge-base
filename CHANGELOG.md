@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Renamed the package to `dsh-workspace-kb` to avoid the unrelated npm package `dsh-knowledge-base`.
+- Installer and bundle patch now use the unique package name.
+
 ## 1.0.0
 
 - Sidebar entry under the Plugins row, with a bookmark fallback when the sidebar is collapsed.

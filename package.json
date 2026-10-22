@@ -1,6 +1,6 @@
 {
-  "name": "dsh-knowledge-base",
-  "version": "1.0.0",
+  "name": "dsh-workspace-kb",
+  "version": "1.0.1",
   "type": "module",
   "description": "A local-first, searchable knowledge base for the DSH workspace, shown as a sidebar panel.",
   "license": "MIT",

@@ -30,10 +30,10 @@ import { homedir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const PACKAGE_NAME = 'dsh-knowledge-base';
+const PACKAGE_NAME = 'dsh-workspace-kb';
 const ROW_ID = 'knowledge-base';
 const PACKAGE_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const PATCH_ROW_RE = /- insert:\r?\n(?: {4}#[^\n]*\r?\n)? {4}- id: knowledge-base\r?\n {6}name: 'dsh-knowledge-base'\r?\n?/u;
+const PATCH_ROW_RE = /- insert:\r?\n(?: {4}#[^\n]*\r?\n)? {4}- id: knowledge-base\r?\n {6}name: 'dsh-workspace-kb'\r?\n?/u;
 
 function dshHome() {
   const configured = process.env.DSH_HOME;
@@ -50,7 +50,7 @@ function profileModules() {
 }
 
 function linkPath() {
-  return join(profileModules(), 'dsh-knowledge-base');
+  return join(profileModules(), 'dsh-workspace-kb');
 }
 
 function patchPath() {
@@ -87,7 +87,7 @@ function linkStatus() {
 function patchBlock(stamp) {
   return [
     '- insert:',
-    `    # dsh-knowledge-base: local workspace knowledge base (installed ${stamp})`,
+    `    # dsh-workspace-kb: local workspace knowledge base (installed ${stamp})`,
     `    - id: ${ROW_ID}`,
     `      name: '${PACKAGE_NAME}'`,
     '',
